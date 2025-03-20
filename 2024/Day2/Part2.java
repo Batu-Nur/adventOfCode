@@ -73,12 +73,14 @@ public class Part2 {
         }
 
         for (int i = 0; i < differences.length - 1; i++) {
-            boolean safe = doesHaveSameSigns(differences[i], differences[i + 1]) &&
-                    isInSafeRange(differences[i]);
 
-            if (!safe) {
+            if (!isInSafeRange(differences[i])) {
                 set.add(i);
                 set.add(i + 1);
+            } else if (!doesHaveSameSigns(differences[i], differences[i + 1])) {
+                set.add(i);
+                set.add(i + 1);
+                set.add(i + 2); // forgot this, which caused off by one
             }
 
         }

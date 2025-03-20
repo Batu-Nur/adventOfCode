@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * Solved but somewhat a lazy and a tad hard to read soultion.
- * The solution is off by one from the real value for some reason
+ * 
  */
 public class Part1 {
     final String FILE_PATH = "input.txt";
