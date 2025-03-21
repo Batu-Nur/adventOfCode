@@ -19,13 +19,15 @@ public class Part1 {
 
         Pattern pattern = Pattern.compile("mul\\(\\d+,\\d+\\)"); // find mul(x,y)
         while (reader.hasNextLine()) {
-            // use
+
             String line = reader.nextLine();
 
             Matcher matcher = pattern.matcher(line);
             while (matcher.find()) {
+
+                // put
                 String nums[] = matcher.group()
-                        .replaceAll("^\\D*|\\)", "") // remove all except x, y
+                        .replaceAll("^\\D*|\\)", "") // remove all except "x,y"
                         .split(",");
                 count += Integer.parseInt(nums[0]) * Integer.parseInt(nums[1]);
             }

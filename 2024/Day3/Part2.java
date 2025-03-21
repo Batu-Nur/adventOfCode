@@ -48,6 +48,12 @@ public class Part2 {
 
     }
 
+    /**
+     * parses the instruction string: "mul(x,y)" calculating x*y
+     * 
+     * @param mulInstruction the instruction "mul(x,y)"
+     * @return x*y
+     */
     private static int parseMulInstruction(String mulInstruction) {
         String nums[] = mulInstruction.replaceAll("^\\D*|\\)", "").split(",");
         return Integer.parseInt(nums[0]) * Integer.parseInt(nums[1]);
