@@ -20,12 +20,12 @@ public class part2 {
         for (int rotation : rotations) {
             position =  position + rotation;
             System.out.println("BEFORE rotation: " + rotation+" position: "+ position+ " zerotimes:" + zerotimes);
-           
-            while (position>=100) {
+          
+            while (position>100) {
                 position -=100;
                 zerotimes++;
             }
-            while (position <0){
+            while (position <=0){
                 position += 100;
                 zerotimes++;
             }
