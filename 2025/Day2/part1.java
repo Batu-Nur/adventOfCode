@@ -38,7 +38,8 @@ public class part1 {
 
 
 
-
+    // should have done is valid and assume invalid, only 
+    // set is valid bool to true if either odd or both halves not equal
     public boolean hasInvalidRepetitions(Long number) {
         // if number does not have even number of digits, skip as it cannot have proper
         // repetitions
